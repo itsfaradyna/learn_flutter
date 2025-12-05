@@ -15,6 +15,11 @@ class CounterItemModel with ChangeNotifier {
     notifyListeners();  // Notify listeners (UI) that the counter has changed
   }
 
+  void setQuantity(int value) {
+    _quantity = value;
+    notifyListeners()
+  }
+
   void reset() {
     _quantity = 0;
     notifyListeners();  // Notify listeners to reset the UI
